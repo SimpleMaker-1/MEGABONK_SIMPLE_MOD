@@ -40,10 +40,11 @@ If you want update your mod while developing, you can replace the `.dll` in your
 
 
 ### Manual BepInEx installation and usage
-1. Open the above mentione BepInEx ZIP again and copy the contents of that ZIP into the games root directory (Steam default installation is `C:\Program Files (x86)\Steam\steamapps\common\Megabonk`)
+1. Open the above mentioned BepInEx ZIP again and copy the contents of that ZIP into the games root directory (Steam default installation is `C:\Program Files (x86)\Steam\steamapps\common\Megabonk`)
 2. Run the game once and then close it, so that BepInEx can properly set it self up.
 3. Take your built mod plugin at `obj\Debug\net6.0\MEGABONK_SIMPLE_MOD.dll` and copy it to the `C:\Program Files (x86)\Steam\steamapps\common\Megabonk\BepInEx\plugins` folder.
 4. Start the game `C:\Program Files (x86)\Steam\steamapps\common\Megabonk\Megabonk.exe` or through Steam. Be aware that starting the game through Steam keeps the leaderboard enabled, sometimes you might not want this.
+5. Alternatively, you can copy the game folder: `C:\Program Files (x86)\Steam\steamapps\common\Megabonk` and place it somewhere else, this will make sure any actions do not affect in-game achievements or leaderboards.
 
 When you develop your mod and want to "refresh" to currently used code; you can rebuild the project and replace `.dll` in `C:\Program Files (x86)\Steam\steamapps\common\Megabonk\BepInEx\plugins` folder.
 
@@ -82,5 +83,6 @@ Simple stuff;
 
 ## Uploading a new version to Thunderstore
 Essentially this is the same as `Packaging for Thunderstore` and `Uploading to Thunderstore`, but you need to increment the versions everywhere. The locations to update the versions should be `Plugin.cs`(if you have defined it there. Remember to rebuild the dll after), `thunderstore_packaging\manifest.json`and the `.csproj` of your project.
+
 
 Then just upload the package as you would upload a new package and the new version will be uploaded.
